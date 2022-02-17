@@ -93,7 +93,7 @@ f2elint fix
 git commit 时对 commit message 的格式进行扫描（使用 commitlint），需配合 husky 的 commit-msg 钩子使用。
 
 
-#结果
+# 结果
 一顿操作过后我们基本上算是已经修复了80%的问题了，但是剩下的20%因为需要人工干涉取舍才能完成修复。
 
 - Expected '===' and instead saw '=='.    eslint(eqeqeq) 
