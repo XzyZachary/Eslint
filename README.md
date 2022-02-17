@@ -116,6 +116,13 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
       bar++;
     }
   ```
+  规则的正确代码示例：
+  ```javascript
+    /*eslint no-param-reassign: "error"*/
+    function foo(bar) {
+      var baz = bar;
+    }
+   ```
 
 
 
