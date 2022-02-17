@@ -14,9 +14,9 @@ Eslint 代码规范整合记录
 ## 安装
 
 在终端执行：
-
+```javascript
 npm install f2elint -g
-
+```
 安装完成后，可执行 f2elint -h 以验证安装成功。（npm可能需要高版本）
 
 ## 使用
@@ -25,7 +25,9 @@ npm install f2elint -g
 
 在项目根目录执行 f2elint init，即可一键接入规约，为项目安装规约 Lint 所需的依赖和配置。
 
-### f2elint init
+```javascript
+f2elint init
+```
 
 具体会做以下事情：
 
@@ -41,7 +43,7 @@ commitlint.config.js：commitlint 配置（继承 commitlint-config-ali）
 f2elint.config.js：f2elint 包的一些配置，如启用的功能等
 配置 git commit 卡口：使用 husky 设置代码提交卡口，在 git commit 时会运行 f2elint commit-file-scan 和 f2elint commit-msg-scan 分别对提交文件和提交信息进行规约检查。f2elint commit-file-scan 默认仅对 error 问题卡口，如果你想对 warn 问题也卡口，可以增加 --strict 参数以开启严格模式
 
-> 注 1：如果项目已经配置过 ESLint、stylelint 等 Linter，执行 f2elint init 将会提示存在冲突的依赖和配置，并在得到确认后进行覆盖： 
+> 注 1：如果项目已经配置过 ESLint、stylelint 等 Linter，执行 f2elint init 将会提示存在冲突的依赖和配置，并在得到确认后进行覆盖。
 > 注 2：如果项目的 .vscode/ 目录被 .gitignore 忽略，可以在拉取项目后单独执行 f2elint init --vscode 命令写入 .vscode/extensions.json 和 .vscode/settings.json 配置文件
 
 
@@ -68,8 +70,9 @@ f2elint.config.js：f2elint 包的一些配置，如启用的功能等
 
 在项目的根目录执行命令，即可修复部分规约问题.
 
-
-### f2elint fix
+```javascript
+f2elint fix
+```
 
 支持下列参数：
 -i --include <dirpath> 指定要进行修复扫描的目录
