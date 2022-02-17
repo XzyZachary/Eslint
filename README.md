@@ -126,14 +126,14 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
   
  - no-nested-ternary    不允许有三元表达式，目的好像是嵌套三元表达式会使代码更难理解。
  - eval can be harmful.   eslint(no-eval）
-    JavaScript的eval()功能是潜在的危险，经常被滥用。eval()在不受信任的代码上使用可以打开一个程序，最多可以进行多种不同的注入攻击 eval()在大多数情况下的使用可以取代对问题更好的替代方法。
+   JavaScript的eval()功能是潜在的危险，经常被滥用。eval()在不受信任的代码上使用可以打开一个程序，最多可以进行多种不同的注入攻击 eval()在大多数情况下的使用可以取代对问题更好的替代方法。
  - indent 首行缩进 
  - Unexpected var, use let or const instead.    eslint(no-var)
-    除了非 ES6环境外，如果开始将 ES6引入其代码库的现有 JavaScript 项目可能不希望应用此规则，如果从var迁移到let的代价过高。
+   除了非 ES6环境外，如果开始将 ES6引入其代码库的现有 JavaScript 项目可能不希望应用此规则，如果从var迁移到let的代价过高。
  - Missing radix parameter.       eslint(radix)
-    第二个参数必填。如果您不想强制执基数值的存在或省略，则可以关闭此规则。
+   第二个参数必填。如果您不想强制执基数值的存在或省略，则可以关闭此规则。
  - Unexpected string concatenation. eslint(prefer-template)
-    在 ES2015（ES6）中，我们可以使用模板文字而不是字符串连接。
+   在 ES2015（ES6）中，我们可以使用模板文字而不是字符串连接。
 
 
 
