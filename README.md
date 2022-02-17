@@ -136,7 +136,9 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
  - Expected 1 empty line after import statement not followed by another import  import/newline-after-import  
    import语句后的空行后面没有另一个import。（导入/导入后换行）
  - The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype.eslint(guard-for-in)
+  
    循环遍历对象for in将包含通过原型链继承的属性。此行为可能会导致 for 循环中出现意外的项目。
+  
    正确示例：
    ```javascript
       /*eslint guard-for-in: "error"*/
@@ -151,7 +153,7 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
     ```
   - no-lonely-if 
     如果一个if陈述是该else块中唯一的陈述，那么使用一个else if表格通常会更清晰。
-  ```javascript
+    ```javascript
       if (foo) {
          // ...
       } else {
@@ -159,7 +161,7 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
           // ...
         }
       }
-  ```
+    ```
    
 
 
