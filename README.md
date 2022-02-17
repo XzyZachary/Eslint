@@ -105,6 +105,19 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
   顾名思义就是不能给函数参数赋值类型。
 
   这个问题在项目中也很常见，其次也不是很好修复。
+  
+  规则的错误代码示例：
+  ```javascript
+  /*eslint no-param-reassign: "error"*/
+
+function foo(bar) {
+    bar = 13;
+}
+
+function foo(bar) {
+    bar++;
+}
+ ```
 
 
 
