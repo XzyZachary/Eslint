@@ -174,6 +174,41 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
         }
       }
     ```
+    应改写为：
+    ```javascript
+      if (foo) {
+        // ...
+      } else if (bar) {
+        // ...
+      }
+    ```
+    - xxxx is better written in dot notation.eslintdot-notation eslint(dot-notation)
+      
+      在 JavaScript 中，可以使用点符号（foo.bar）或方括号表示法（foo["bar"]）来访问属性。但是，点符号通常是首选，因为它更易于阅读，不会太冗长，而且在侵略性 JavaScript 最小化器中效果更好。
+  
+    - Expected longform method syntax for string literal keys.eslint(object-shorthand)
+  
+      ECMAScript 6为定义对象字面值方法和属性提供了一个简明的形式。这种语法可以使定义复杂的对象文字更清晰。
+  
+      ```javascirpt
+        var foo = {
+          w: function() {},
+          x: function *() {},
+          [y]: function() {},
+          z: z
+        };
+      ```
+      应改写为：
+      
+      ```javascript
+        var foo = {
+           w() {},
+           *x() {},
+           [y]() {},
+            z
+        };
+      ```
+    
    
 
 
