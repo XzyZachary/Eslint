@@ -44,7 +44,8 @@ f2elint.config.js：f2elint 包的一些配置，如启用的功能等
 配置 git commit 卡口：使用 husky 设置代码提交卡口，在 git commit 时会运行 f2elint commit-file-scan 和 f2elint commit-msg-scan 分别对提交文件和提交信息进行规约检查。f2elint commit-file-scan 默认仅对 error 问题卡口，如果你想对 warn 问题也卡口，可以增加 --strict 参数以开启严格模式
 
 > 注 1：如果项目已经配置过 ESLint、stylelint 等 Linter，执行 f2elint init 将会提示存在冲突的依赖和配置，并在得到确认后进行覆盖。
-> 注 2：如果项目的 .vscode/ 目录被 .gitignore 忽略，可以在拉取项目后单独执行 f2elint init --vscode 命令写入 .vscode/extensions.json 和 .vscode/settings.json 配置文件
+
+>  注 2：如果项目的 .vscode/ 目录被 .gitignore 忽略，可以在拉取项目后单独执行 f2elint init --vscode 命令写入 .vscode/extensions.json 和 .vscode/settings.json 配置文件
 
 
 ### f2elint scan：一键扫描
