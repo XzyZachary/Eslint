@@ -108,16 +108,14 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
   
   规则的错误代码示例：
   ```javascript
-  /*eslint no-param-reassign: "error"*/
-
-function foo(bar) {
-    bar = 13;
-}
-
-function foo(bar) {
-    bar++;
-}
- ```
+    /*eslint no-param-reassign: "error"*/
+    function foo(bar) {
+      bar = 13;
+    }
+    function foo(bar) {
+      bar++;
+    }
+  ```
 
 
 
