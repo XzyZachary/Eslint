@@ -93,14 +93,14 @@ f2elint fix
 git commit 时对 commit message 的格式进行扫描（使用 commitlint），需配合 husky 的 commit-msg 钩子使用。
 
 
-结果
+#结果
 一顿操作过后我们基本上算是已经修复了80%的问题了，但是剩下的20%因为需要人工干涉取舍才能完成修复。
 
-Expected '===' and instead saw '=='.    eslint(eqeqeq) 
+- Expected '===' and instead saw '=='.    eslint(eqeqeq) 
 
 项目中最多的warning，目的是为了类型安全。虽然只是警告，修复起来也不算困难，但是项目中实在是太多太多太多了。。。
 
-Assignment to property of function parameter 'xxxx'  eslint(no-param-reassign)
+- Assignment to property of function parameter 'xxxx'  eslint(no-param-reassign)
 
 顾名思义就是不能给函数参数赋值类型。
 
