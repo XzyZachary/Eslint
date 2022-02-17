@@ -133,7 +133,9 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
    第二个参数必填。如果您不想强制执基数值的存在或省略，则可以关闭此规则。
  - Unexpected string concatenation. eslint(prefer-template)  
    在 ES2015（ES6）中，我们可以使用模板文字而不是字符串连接。
-
+ - Expected 1 empty line after import statement not followed by another import  import/newline-after-import
+   import语句后的空行后面没有另一个import。（导入/导入后换行）
+   
 
 
 
