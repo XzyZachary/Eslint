@@ -32,15 +32,15 @@ f2elint init
 具体会做以下事情：
 
 安装各种依赖：包括 Linter 依赖，如 ESLint、stylelint、commitlint、markdownlint 等；配置依赖，如 eslint-config-ali、stylelint-config-ali、commitlint-config-ali、markdownlint-config-ali 等写入各种配置文件，包括：
-.eslintrc.js、.eslintignore：ESLint 配置（继承 eslint-config-ali）及黑名单文件
-.stylelintrc.js、.stylelintignore：stylelint 配置（继承 stylelint-config-ali）及黑名单文件
-commitlint.config.js：commitlint 配置（继承 commitlint-config-ali）
-.markdownlint.json、.markdownlintignore：markdownlint 配置及黑名单文件
-.prettierrc.js：符合规约的 Prettier 配置
-.editorconfig：符合规约的 editorconfig
-.vscode/extensions.json：写入规约相关的 VSCode 插件推荐，包括 ESLint、stylelint、markdownlint、prettier 等
-.vscode/settings.json：写入规约相关的 VSCode 设置，设置 ESLint 和 stylelint 插件的 validate 及保存时自动运行 fix，如果选择使用 Prettier，会同时将 prettier-vscode 插件设置为各前端语言的 defaultFormatter，并配置保存时自动格式化
-f2elint.config.js：f2elint 包的一些配置，如启用的功能等
+- .eslintrc.js、.eslintignore：ESLint 配置（继承 eslint-config-ali）及黑名单文件
+- .stylelintrc.js、.stylelintignore：stylelint 配置（继承 stylelint-config-ali）及黑名单文件
+- commitlint.config.js：commitlint 配置（继承 commitlint-config-ali）
+- .markdownlint.json、.markdownlintignore：markdownlint 配置及黑名单文件
+- .prettierrc.js：符合规约的 Prettier 配置
+- .editorconfig：符合规约的 editorconfig
+- .vscode/extensions.json：写入规约相关的 VSCode 插件推荐，包括 ESLint、stylelint、markdownlint、prettier 等
+- .vscode/settings.json：写入规约相关的 VSCode 设置，设置 ESLint 和 stylelint 插件的 validate 及保存时自动运行 fix，如果选择使用 Prettier，会同时将 prettier-vscode 插件设置为各前端语言的 defaultFormatter，并配置保存时自动格式化
+- f2elint.config.js：f2elint 包的一些配置，如启用的功能等
 配置 git commit 卡口：使用 husky 设置代码提交卡口，在 git commit 时会运行 f2elint commit-file-scan 和 f2elint commit-msg-scan 分别对提交文件和提交信息进行规约检查。f2elint commit-file-scan 默认仅对 error 问题卡口，如果你想对 warn 问题也卡口，可以增加 --strict 参数以开启严格模式
 
 > 注 1：如果项目已经配置过 ESLint、stylelint 等 Linter，执行 f2elint init 将会提示存在冲突的依赖和配置，并在得到确认后进行覆盖。
