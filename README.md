@@ -4,7 +4,7 @@ Eslint 代码规范整合记录
 
 # 前景准备
 
-咨询了阿里那边的人员，得知他们的一套规范目前是开发对外的，虽然在阿里云的代码扫描的文档里面只写了 Eslint默认规则集。所以我们拿到了https://github.com/alibaba/f2e-spec这个链接。
+咨询了阿里那边的人员，得知他们的一套规范目前是开发对外的，虽然在阿里云的代码扫描的文档里面只写了 Eslint默认规则集。所以我们拿到了https://github.com/alibaba/f2e-spec 这个链接。
 
 文档写的很清晰明了，可以自行查阅。阿里甚至还封装了 F2ELint 这个 npm 包，它收敛屏蔽了这些依赖和配置细节，提供简单的 CLI 和 Node.js API，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡口，降低项目接入规约的成本。
 
@@ -66,7 +66,7 @@ f2elint.config.js：f2elint 包的一些配置，如启用的功能等
 
 ### f2elint fix：一键修复
 
-在项目的根目录执行命令，即可修复部分规约问题：
+在项目的根目录执行命令，即可修复部分规约问题.
 
 
 ### f2elint fix
@@ -77,14 +77,14 @@ f2elint.config.js：f2elint 包的一些配置，如启用的功能等
 注意请 review 下修复前后的代码，以免工具误修的情况。
 
 
-f2elint commit-file-scan 提交文件扫描
+### f2elint commit-file-scan 提交文件扫描
 
 在 git commit 时对提交文件进行规约问题扫描，需配合 git 的 pre-commit 钩子使用。
 
 支持下列参数：
 -s --strict 严格模式，对 warn 和 error 问题都卡口，默认仅对 error 问题卡口
 
-f2elint commit-msg-scan 提交信息扫描
+### f2elint commit-msg-scan 提交信息扫描
 
 git commit 时对 commit message 的格式进行扫描（使用 commitlint），需配合 husky 的 commit-msg 钩子使用。
 
