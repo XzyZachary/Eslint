@@ -98,13 +98,13 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
 
 - Expected '===' and instead saw '=='.    eslint(eqeqeq) 
 
-项目中最多的warning，目的是为了类型安全。虽然只是警告，修复起来也不算困难，但是项目中实在是太多太多太多了。。。
+  项目中最多的warning，目的是为了类型安全。虽然只是警告，修复起来也不算困难，但是项目中实在是太多太多太多了。。。
 
 - Assignment to property of function parameter 'xxxx'  eslint(no-param-reassign)
 
-顾名思义就是不能给函数参数赋值类型。
+  顾名思义就是不能给函数参数赋值类型。
 
-这个问题在项目中也很常见，其次也不是很好修复。
+  这个问题在项目中也很常见，其次也不是很好修复。
 
 
 
