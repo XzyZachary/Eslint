@@ -133,8 +133,33 @@ git commit 时对 commit message 的格式进行扫描（使用 commitlint），
    第二个参数必填。如果您不想强制执基数值的存在或省略，则可以关闭此规则。
  - Unexpected string concatenation. eslint(prefer-template)  
    在 ES2015（ES6）中，我们可以使用模板文字而不是字符串连接。
- - Expected 1 empty line after import statement not followed by another import  import/newline-after-import
+ - Expected 1 empty line after import statement not followed by another import  import/newline-after-import  
    import语句后的空行后面没有另一个import。（导入/导入后换行）
+ - The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype.eslint(guard-for-in)
+   循环遍历对象for in将包含通过原型链继承的属性。此行为可能会导致 for 循环中出现意外的项目。
+   正确示例：
+   ```javascript
+      /*eslint guard-for-in: "error"*/
+      for (key in foo) {
+        if (Object.prototype.hasOwnProperty.call(foo, key)) {
+          doSomething(key);
+        }
+        if ({}.hasOwnProperty.call(foo, key)) {
+          doSomething(key);
+        }
+      }
+    ```
+  - no-lonely-if 
+    如果一个if陈述是该else块中唯一的陈述，那么使用一个else if表格通常会更清晰。
+  ```javascript
+      if (foo) {
+         // ...
+      } else {
+        if (bar) {
+          // ...
+        }
+      }
+  ```
    
 
 
